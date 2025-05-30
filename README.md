@@ -5,6 +5,7 @@ This project aims to predict customer **intents** based on **utterances** (text 
 ---
 
 ## 📂 Project Structure
+```
 ├── data/
 │ ├── X_train.csv
 │ ├── X_val.csv
@@ -18,6 +19,7 @@ This project aims to predict customer **intents** based on **utterances** (text 
 │
 ├── intent.ipynb # Exploratory experiments and results
 ├── README.md
+```
 
 ---
 
