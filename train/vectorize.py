@@ -14,7 +14,7 @@ def initiate_vectroizer():
                                                         output_sequence_length= max_length # We dont cap the output as longest sequence is unknown it will basically pad others
                                                         #  pad_to_max_tokens=True
     )
-    # text_Vectorizer.adapt(X_train)
+    text_Vectorizer.adapt(X_train)
     return text_Vectorizer
 
 def initiate_embedder():
