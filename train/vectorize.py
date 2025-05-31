@@ -18,6 +18,7 @@ def initiate_vectroizer():
     return text_Vectorizer
 
 def initiate_embedder():
+    max_vocab_length = 10000
     embedding = tf.keras.layers.Embedding(input_dim=max_vocab_length,# Input shape or Vocab
                         output_dim=128,
                         input_length=max_length# Length of Sequence
