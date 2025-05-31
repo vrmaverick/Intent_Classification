@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 def initiate_vectroizer():
     max_vocab_length = 10000
     average_length = 8
-    max_length = average_length #8
+    max_length = average_length
     #max_length = 8
     text_Vectorizer = tf.keras.layers.TextVectorization (max_tokens= max_vocab_length,  # how many words in vocab
                                                         #  standardize="lower_and_strip_punctuation",
@@ -14,13 +14,11 @@ def initiate_vectroizer():
                                                         output_sequence_length= max_length # We dont cap the output as longest sequence is unknown it will basically pad others
                                                         #  pad_to_max_tokens=True
     )
-    text_Vectorizer.adapt(X_train)
     return text_Vectorizer
 
 def initiate_embedder():
     max_vocab_length = 10000
-    average_length = 8
-    max_length = average_length #8
+    max_length = 8
     embedding = tf.keras.layers.Embedding(input_dim=max_vocab_length,# Input shape or Vocab
                         output_dim=128,
                         input_length=max_length# Length of Sequence
