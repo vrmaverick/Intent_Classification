@@ -3,6 +3,7 @@ from sklearn.preprocessing import LabelEncoder
 
 def initiate_vectroizer():
     max_vocab_length = 10000
+    average_length = 8
     max_length = average_length #8
     #max_length = 8
     text_Vectorizer = tf.keras.layers.TextVectorization (max_tokens= max_vocab_length,  # how many words in vocab
